@@ -104,3 +104,107 @@ Fast-forward
  create mode 100644 README.md
  create mode 100644 service.html
 ````
+exercise 2
+````
+ git branch ft/service-redesign
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (ft/service-redesign)
+$ code service.html
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (ft/service-redesign)
+$ git add service.html
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (ft/service-redesign)
+$ git commit -m "redesign service page content"
+[ft/service-redesign 0242e2f] redesign service page content
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 2.65 KiB | 906.00 KiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/ora-nova/GYM-Git-exercise-solution/pull/new/ft/service-redesign
+remote:
+To https://github.com/ora-nova/GYM-Git-exercise-solution
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main)
+$ code service.html
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main)
+$ git add service.html
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main)
+$ git commit -m "update services description in main"
+[main d36fd7e] update services description in main
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main)
+$ git push origin main
+To https://github.com/ora-nova/GYM-Git-exercise-solution
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/ora-nova/GYM-Git-exercise-solution'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main)
+$ ^C
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main)
+$ git pull origin main
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 2.59 KiB | 40.00 KiB/s, done.
+From https://github.com/ora-nova/GYM-Git-exercise-solution
+ * branch            main       -> FETCH_HEAD
+   289a32f..41a5f07  main       -> origin/main
+Auto-merging service.html
+CONFLICT (content): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main|MERGING)
+$ ^C
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main|MERGING)
+$ code  service.html
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main|MERGING)
+$ git add service.html
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main|MERGING)
+$ git commit -m "resolve merge conflict in service.html"
+[main 4b15b89] resolve merge conflict in service.html
+
+tech heaven@DESKTOP-PVBNUBJ MINGW64 ~/myproject (main)
+$ git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 730 bytes | 243.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/ora-nova/GYM-Git-exercise-solution
+   41a5f07..4b15b89  main -> main
+````
